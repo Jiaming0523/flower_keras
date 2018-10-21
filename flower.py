@@ -17,11 +17,11 @@ from keras.optimizers import Adam
 
 import os
 
-print(os.listdir("../input/flowers/flowers/"))
+print(os.listdir("/media/sf_Shared_F/flowers/"))
 
 script_dir = os.path.dirname(".")
-training_set_path = os.path.join(script_dir, '../input/flowers/flowers/')
-test_set_path = os.path.join(script_dir, '../input/flowers/flowers/')
+training_set_path = os.path.join(script_dir, '/media/sf_Shared_F/flowers')
+test_set_path = os.path.join(script_dir, '/media/sf_Shared_F/flowers')
 
 input_size = (256, 256)
 classifier.add(Conv2D(32, (3, 3), input_shape=(256,256,3), activation='relu'))
