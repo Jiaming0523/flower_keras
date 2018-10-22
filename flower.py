@@ -23,6 +23,7 @@ script_dir = os.path.dirname(".")
 training_set_path = os.path.join(script_dir, '/media/sf_Shared_F/flowers')
 test_set_path = os.path.join(script_dir, '/media/sf_Shared_F/flowers')
 
+classifier = Sequential()
 input_size = (256, 256)
 classifier.add(Conv2D(32, (3, 3), input_shape=(256,256,3), activation='relu'))
 
