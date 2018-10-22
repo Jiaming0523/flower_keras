@@ -69,10 +69,9 @@ test_set = test_datagen.flow_from_directory(test_set_path,
 
 model_info = classifier.fit_generator(training_set,
                          steps_per_epoch=1000/batch_size,
-                         epochs=90,
+                         epochs=10,
                          validation_data=test_set,
-                         validation_steps=100/batch_size,
-                         workers=12)
+                         validation_steps=100/batch_size)
 
 from IPython.display import Image, display 
 from tensorflow.python.keras.preprocessing.image import load_img, img_to_array
