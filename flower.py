@@ -32,7 +32,7 @@ classifier.add(Dense(units=1, activation='sigmoid'))
 classifier.compile(optimizer = 'adam', loss='binary_crossentropy', metrics=['accuracy'])
 
 batch_size = 32
-
+#fitting the pictures 
 train_datagen = ImageDataGenerator(rescale=1. / 255,
                                    shear_range=0.2,
                                    zoom_range=0.2,
