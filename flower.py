@@ -44,13 +44,13 @@ training_set = train_datagen.flow_from_directory(training_set_path,
                                                  target_size=input_size,
                                                  batch_size=batch_size,
                                                  subset="training",
-                                                 class_mode='categorical')
+                                                 class_mode='binary')
 
 test_set = test_datagen.flow_from_directory(test_set_path,
                                             target_size=input_size,
                                             batch_size=batch_size,
                                             subset="validation",
-                                            class_mode='categorical')
+                                            class_mode='binary')
 
 model_info = classifier.fit_generator(training_set,
                          steps_per_epoch=1000/batch_size,
