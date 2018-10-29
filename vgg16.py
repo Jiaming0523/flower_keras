@@ -75,6 +75,6 @@ model_info = classifier.fit_generator(training_set,
                          validation_data=test_set,
                          validation_steps=100/batch_size)
 
-test_loss, test_accuracy = classifier.evaluate(test_datagen, test_set)
+test_loss, test_accuracy = classifier.evaluate(test_set, test_datagen)
 classifier.save('./classify.h5')
 print(test_loss,test_accuracy)
